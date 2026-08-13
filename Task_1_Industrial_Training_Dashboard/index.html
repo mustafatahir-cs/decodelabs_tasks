@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive Industrial Training Dashboard built with HTML5, CSS3 and JavaScript for the DecodeLabs Full Stack Development Internship.">
+  <meta name="author" content="Mustafa Tahir">
+  <title>Industrial Training Dashboard | Mustafa Tahir</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Industrial Training Dashboard home">
+        <span class="brand-mark" aria-hidden="true">IT</span>
+        <span>
+          <strong>Training Dashboard</strong>
+          <small>DecodeLabs Internship</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+        <span class="sr-only">Open navigation menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#milestones">Milestones</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Full Stack Development Internship · 2026</p>
+          <h1>Track progress. Complete milestones. Build real skills.</h1>
+          <p class="hero-text">
+            A responsive internship dashboard for managing weekly tasks, learning goals,
+            project milestones and professional growth.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#tasks">View Tasks</a>
+            <a class="button secondary" href="#milestones">See Milestones</a>
+          </div>
+
+          <ul class="hero-meta">
+            <li><strong>Intern:</strong> Mustafa Tahir</li>
+            <li><strong>Role:</strong> Full Stack Development Intern</li>
+            <li><strong>Mode:</strong> Remote</li>
+          </ul>
+        </div>
+
+        <aside class="progress-card" aria-labelledby="progress-title">
+          <div class="row-between">
+            <div>
+              <p class="eyebrow">Final progress</p>
+              <h2 id="progress-title">Project 1</h2>
+            </div>
+            <span class="badge success">Completed</span>
+          </div>
+
+          <div class="progress-ring" role="img" aria-label="Project progress: 100 percent">
+            <span>100%</span>
+          </div>
+
+          <dl class="stats-grid">
+            <div><dt>Completed</dt><dd>6 tasks</dd></div>
+            <div><dt>Remaining</dt><dd>0 tasks</dd></div>
+            <div><dt>Status</dt><dd>Ready</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Internship overview</p>
+            <h2>Everything important in one place</h2>
+          </div>
+          <p>
+            The dashboard gives a quick view of assignments, completed milestones,
+            learning progress and skills developed during the internship.
+          </p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="card">
+            <span class="icon" aria-hidden="true">📌</span>
+            <h3>Project focus</h3>
+            <p>Responsive frontend development using semantic HTML, CSS Grid, Flexbox and JavaScript.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon" aria-hidden="true">🗓️</span>
+            <h3>Internship period</h3>
+            <p>August 2026 to September 2026, completed remotely through mentor-guided project work.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon" aria-hidden="true">🎯</span>
+            <h3>Main objective</h3>
+            <p>Build practical experience while delivering responsive, accessible and interactive user interfaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tasks" class="section section-alt">
+      <div class="container">
+        <div class="section-heading section-heading-stack">
+          <div>
+            <p class="eyebrow">Weekly assignments</p>
+            <h2>Task board</h2>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filter tasks">
+            <button class="filter-button active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="completed">Completed</button>
+            <button class="filter-button" type="button" data-filter="frontend">Frontend</button>
+            <button class="filter-button" type="button" data-filter="testing">Testing</button>
+          </div>
+        </div>
+
+        <div class="task-grid">
+          <article class="task-card" data-status="completed" data-category="completed frontend">
+            <div class="row-between">
+              <span class="task-number">01</span>
+              <span class="badge success">Completed</span>
+            </div>
+            <h3>Discovery and user research</h3>
+            <p>Defined the target user, project goals, information needs and dashboard scope.</p>
+            <ul class="tags"><li>Research</li><li>Planning</li></ul>
+          </article>
+
+          <article class="task-card" data-status="completed" data-category="completed frontend">
+            <div class="row-between">
+              <span class="task-number">02</span>
+              <span class="badge success">Completed</span>
+            </div>
+            <h3>Low-fidelity wireframe</h3>
+            <p>Planned content hierarchy, section flow, mobile layout and navigation structure.</p>
+            <ul class="tags"><li>Wireframing</li><li>UI planning</li></ul>
+          </article>
+
+          <article class="task-card" data-status="completed" data-category="completed frontend">
+            <div class="row-between">
+              <span class="task-number">03</span>
+              <span class="badge success">Completed</span>
+            </div>
+            <h3>Semantic HTML structure</h3>
+            <p>Built accessible page landmarks using header, navigation, main sections and footer.</p>
+            <ul class="tags"><li>HTML5</li><li>Accessibility</li></ul>
+          </article>
+
+          <article class="task-card" data-status="completed" data-category="completed frontend">
+            <div class="row-between">
+              <span class="task-number">04</span>
+              <span class="badge success">Completed</span>
+            </div>
+            <h3>Responsive visual design</h3>
+            <p>Created mobile-friendly layouts using CSS Grid, Flexbox and media queries.</p>
+            <ul class="tags"><li>CSS Grid</li><li>Flexbox</li></ul>
+          </article>
+
+          <article class="task-card" data-status="completed" data-category="completed frontend">
+            <div class="row-between">
+              <span class="task-number">05</span>
+              <span class="badge success">Completed</span>
+            </div>
+            <h3>JavaScript interactions</h3>
+            <p>Implemented filtering, responsive navigation, theme switching and form validation.</p>
+            <ul class="tags"><li>JavaScript</li><li>DOM</li></ul>
+          </article>
+
+          <article class="task-card" data-status="completed" data-category="completed testing">
+            <div class="row-between">
+              <span class="task-number">06</span>
+              <span class="badge success">Completed</span>
+            </div>
+            <h3>Testing and deployment preparation</h3>
+            <p>Reviewed responsive layouts, keyboard use, validation behaviour and repository readiness.</p>
+            <ul class="tags"><li>Testing</li><li>GitHub</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="milestones" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Project roadmap</p>
+            <h2>Milestones</h2>
+          </div>
+          <p>Each milestone demonstrates a completed stage in the frontend development workflow.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item complete">
+            <span class="marker">✓</span>
+            <div>
+              <p class="timeline-date">Stage 1</p>
+              <h3>Research and planning</h3>
+              <p>User needs, scope and layout planning completed.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item complete">
+            <span class="marker">✓</span>
+            <div>
+              <p class="timeline-date">Stage 2</p>
+              <h3>Frontend implementation</h3>
+              <p>Semantic HTML, responsive layout and visual styling completed.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item complete">
+            <span class="marker">✓</span>
+            <div>
+              <p class="timeline-date">Stage 3</p>
+              <h3>Interaction and testing</h3>
+              <p>JavaScript, validation, accessibility checks and device testing completed.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item complete">
+            <span class="marker">✓</span>
+            <div>
+              <p class="timeline-date">Stage 4</p>
+              <h3>Submission preparation</h3>
+              <p>Repository cleanup, documentation, screenshots and final report completed.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Learning progress</p>
+            <h2>Skills developed</h2>
+          </div>
+          <p>Skills strengthened through project-based implementation, testing and documentation.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="row-between"><h3>HTML5</h3><span>85%</span></div>
+            <div class="skill-bar"><span style="width:85%"></span></div>
+            <p>Semantic structure, accessible content sections and meaningful page landmarks.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="row-between"><h3>CSS3</h3><span>82%</span></div>
+            <div class="skill-bar"><span style="width:82%"></span></div>
+            <p>Responsive design, Grid, Flexbox, media queries and component styling.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="row-between"><h3>JavaScript</h3><span>72%</span></div>
+            <div class="skill-bar"><span style="width:72%"></span></div>
+            <p>DOM manipulation, task filtering, theme switching, navigation and validation.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="row-between"><h3>Accessibility</h3><span>70%</span></div>
+            <div class="skill-bar"><span style="width:70%"></span></div>
+            <p>Labels, focus states, semantic elements, ARIA attributes and keyboard-friendly controls.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Mentor communication</p>
+          <h2>Send a project update</h2>
+          <p>
+            This form demonstrates client-side validation. It does not send or store information on a server.
+          </p>
+        </div>
+
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required minlength="2" autocomplete="name">
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="update">Project update</label>
+            <textarea id="update" name="update" rows="5" required minlength="20"></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+
+          <button class="button primary" type="submit">Submit update</button>
+          <p class="form-success" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Industrial Training Dashboard</strong>
+        <p>Responsive internship project by Mustafa Tahir.</p>
+      </div>
+      <p>Built with HTML5, CSS3 and JavaScript · DecodeLabs Project 1</p>
+    </div>
+  </footer>
+</body>
+</html>
