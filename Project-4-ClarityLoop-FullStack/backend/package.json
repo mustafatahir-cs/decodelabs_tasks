@@ -1,0 +1,19 @@
+{
+  "name": "clarityloop-project-4-backend",
+  "version": "1.0.0",
+  "description": "ClarityLoop Project 4 backend and SQL Server API for Decode Labs Full Stack Development internship.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "db:test": "node test-db.js",
+    "check": "node --check server.js && node --check src/db.js && node --check test-db.js"
+  },
+  "author": "Mustafa Tahir",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mssql": "^12.7.0",
+    "msnodesqlv8": "^5.2.3"
+  }
+}
