@@ -1,0 +1,92 @@
+{
+  "info": {
+    "_postman_id": "clarityloop-db-project3",
+    "name": "ClarityLoop DB API - Project 3",
+    "description": "Manual API testing collection for DecodeLabs Full Stack Development Project 3.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "decisionId",
+      "value": "PASTE-A-VALID-DECISION-ID-HERE"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/health"
+      }
+    },
+    {
+      "name": "Read All Decisions",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/decisions"
+      }
+    },
+    {
+      "name": "Create Decision",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Choose my next backend learning topic\",\n  \"context\": \"I have connected Node.js with SQL Server and want to continue improving backend development.\",\n  \"reasoning\": \"Learning authentication after database integration will help me understand complete backend application flow.\",\n  \"confidence\": 88,\n  \"reviewDate\": \"2026-08-20\",\n  \"options\": [\n    \"Learn authentication\",\n    \"Learn caching\",\n    \"Learn WebSockets\"\n  ],\n  \"selectedOption\": \"Learn authentication\",\n  \"tags\": [\n    \"backend\",\n    \"learning\"\n  ]\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/decisions"
+      }
+    },
+    {
+      "name": "Update Decision",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Choose my next advanced backend topic\",\n  \"context\": \"I have completed SQL Server database integration with Node.js and now want to continue strengthening backend development.\",\n  \"reasoning\": \"Authentication is the best next step because it will help me understand secure user access and complete backend application flow.\",\n  \"confidence\": 92,\n  \"reviewDate\": \"2026-08-25\"\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/decisions/{{decisionId}}"
+      }
+    },
+    {
+      "name": "Delete Decision",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/v1/decisions/{{decisionId}}"
+      }
+    },
+    {
+      "name": "Validation Error - Confidence 150",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Invalid confidence test\",\n  \"context\": \"Testing API validation.\",\n  \"reasoning\": \"This request should fail because the confidence value is outside the allowed range.\",\n  \"confidence\": 150,\n  \"reviewDate\": \"2026-08-25\",\n  \"options\": [\n    \"Option A\",\n    \"Option B\"\n  ],\n  \"selectedOption\": \"Option A\",\n  \"tags\": [\n    \"testing\"\n  ]\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/decisions"
+      }
+    }
+  ]
+}

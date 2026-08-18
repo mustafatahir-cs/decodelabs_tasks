@@ -1,0 +1,19 @@
+{
+  "name": "clarityloop-db-api",
+  "version": "1.0.0",
+  "description": "DecodeLabs Project 3 - ClarityLoop database-backed REST API using Node.js, Express and Microsoft SQL Server.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "db:test": "node test-db.js",
+    "check": "node --check server.js && node --check src/db.js && node --check test-db.js"
+  },
+  "author": "Mustafa Tahir",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mssql": "^12.7.0",
+    "msnodesqlv8": "^5.2.3"
+  }
+}
