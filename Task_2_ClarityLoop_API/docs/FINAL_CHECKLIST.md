@@ -1,0 +1,22 @@
+# Project 2 Final Checklist
+
+- [x] Node.js backend source included
+- [x] Express.js REST API included
+- [x] GET endpoints included
+- [x] POST endpoints included
+- [x] User-input validation included
+- [x] Structured JSON responses included
+- [x] 404 handling included
+- [x] JSON persistence included
+- [x] Decision filtering included
+- [x] Outcome review flow included
+- [x] Confidence-versus-outcome insights included
+- [x] Postman collection included
+- [x] Eight automated tests included
+- [x] Eight automated tests passing
+- [x] README included
+- [x] API documentation included
+- [x] Architecture documentation included
+- [x] Testing documentation included
+- [x] Professional report included
+- [x] Submission-ready ZIP included

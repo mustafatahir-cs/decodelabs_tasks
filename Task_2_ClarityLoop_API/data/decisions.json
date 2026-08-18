@@ -1,0 +1,46 @@
+[
+  {
+    "id": "dec_001",
+    "title": "Choose a backend framework",
+    "category": "backend",
+    "context": "I needed a lightweight backend framework for a small REST API project.",
+    "options": [
+      "Express.js",
+      "Fastify",
+      "NestJS"
+    ],
+    "selectedOption": "Express.js",
+    "reasoning": "Express.js is simple, widely used, and suitable for learning REST API fundamentals.",
+    "confidence": 86,
+    "createdAt": "2026-08-07T10:00:00.000Z",
+    "review": {
+      "outcome": "positive",
+      "outcomeScore": 9,
+      "actualOutcome": "The API was completed successfully with clear routing and validation.",
+      "lessonLearned": "A simple framework can be more effective when the goal is to learn core backend concepts.",
+      "reviewedAt": "2026-08-10T13:00:00.000Z"
+    }
+  },
+  {
+    "id": "dec_002",
+    "title": "Choose API testing tool",
+    "category": "testing",
+    "context": "I needed a practical way to test HTTP endpoints and inspect JSON responses.",
+    "options": [
+      "Postman",
+      "curl",
+      "Insomnia"
+    ],
+    "selectedOption": "Postman",
+    "reasoning": "Postman provides an accessible interface for testing requests, status codes, and response bodies.",
+    "confidence": 82,
+    "createdAt": "2026-08-08T09:30:00.000Z",
+    "review": {
+      "outcome": "positive",
+      "outcomeScore": 8,
+      "actualOutcome": "Postman made manual endpoint testing and evidence capture straightforward.",
+      "lessonLearned": "Manual API tools are useful for validating behaviour before adding automated tests.",
+      "reviewedAt": "2026-08-10T14:00:00.000Z"
+    }
+  }
+]

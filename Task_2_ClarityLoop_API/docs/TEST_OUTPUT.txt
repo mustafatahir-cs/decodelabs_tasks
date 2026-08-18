@@ -1,0 +1,59 @@
+TAP version 13
+# Subtest: 1. accepts a valid decision
+ok 1 - 1. accepts a valid decision
+  ---
+  duration_ms: 0.837846
+  type: 'test'
+  ...
+# Subtest: 2. rejects confidence above 100
+ok 2 - 2. rejects confidence above 100
+  ---
+  duration_ms: 0.136874
+  type: 'test'
+  ...
+# Subtest: 3. rejects fewer than two options
+ok 3 - 3. rejects fewer than two options
+  ---
+  duration_ms: 0.14813
+  type: 'test'
+  ...
+# Subtest: 4. rejects a selected option not present in options
+ok 4 - 4. rejects a selected option not present in options
+  ---
+  duration_ms: 0.184885
+  type: 'test'
+  ...
+# Subtest: 5. accepts a valid outcome review
+ok 5 - 5. accepts a valid outcome review
+  ---
+  duration_ms: 0.220358
+  type: 'test'
+  ...
+# Subtest: 6. rejects invalid outcome score
+ok 6 - 6. rejects invalid outcome score
+  ---
+  duration_ms: 0.190123
+  type: 'test'
+  ...
+# Subtest: 7. filters decisions by category
+ok 7 - 7. filters decisions by category
+  ---
+  duration_ms: 1.00257
+  type: 'test'
+  ...
+# Subtest: 8. calculates confidence-versus-outcome insights
+ok 8 - 8. calculates confidence-versus-outcome insights
+  ---
+  duration_ms: 0.260387
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 59.104409
+

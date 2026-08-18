@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "clarityloop-project2",
+    "name": "ClarityLoop API - DecodeLabs Project 2",
+    "description": "Postman collection for ClarityLoop Decision Journal API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "decisionId",
+      "value": "dec_001"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/health"
+      }
+    },
+    {
+      "name": "Get All Decisions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/v1/decisions"
+      }
+    },
+    {
+      "name": "Filter Decisions by Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/v1/decisions?category=backend"
+      }
+    },
+    {
+      "name": "Get Decision by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/v1/decisions/{{decisionId}}"
+      }
+    },
+    {
+      "name": "Create Decision",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Choose next backend topic\",\n  \"category\": \"backend\",\n  \"context\": \"I want to continue improving backend development.\",\n  \"options\": [\n    \"Authentication\",\n    \"Caching\",\n    \"WebSockets\"\n  ],\n  \"selectedOption\": \"Authentication\",\n  \"reasoning\": \"Authentication is the best next step for understanding secure application flow.\",\n  \"confidence\": 88\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/decisions"
+      }
+    },
+    {
+      "name": "Add Outcome Review",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"outcome\": \"positive\",\n  \"outcomeScore\": 9,\n  \"actualOutcome\": \"The selected option worked well.\",\n  \"lessonLearned\": \"The initial reasoning was accurate and useful.\"\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/decisions/{{decisionId}}/review"
+      }
+    },
+    {
+      "name": "Get Insights",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/v1/insights"
+      }
+    },
+    {
+      "name": "Validation Error - Invalid Confidence",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Invalid test\",\n  \"category\": \"testing\",\n  \"context\": \"Testing validation.\",\n  \"options\": [\n    \"A\",\n    \"B\"\n  ],\n  \"selectedOption\": \"A\",\n  \"reasoning\": \"This request should fail.\",\n  \"confidence\": 150\n}"
+        },
+        "url": "{{baseUrl}}/api/v1/decisions"
+      }
+    }
+  ]
+}
